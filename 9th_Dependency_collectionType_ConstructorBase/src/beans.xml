@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.sit.model.Student" id="stu" scope="prototype">
+    	<constructor-arg name="id" value="1"></constructor-arg>
+    	<constructor-arg name="name" value="Rutika"></constructor-arg>
+    	<constructor-arg name="email" value="rutu@gmail.com"></constructor-arg>
+    	<constructor-arg name="addr" value="kop"></constructor-arg>
+    	<constructor-arg name="subjcet">
+    	<list>
+    		<value>Marathi</value>
+    		<value>English </value>
+    		<value>Hindi</value>
+    	</list>
+    	</constructor-arg>
+    	
+    	<constructor-arg name="mobilno">
+    	<set>
+    		<value>7397850374</value>
+    	    <value>9579144734</value>
+    	
+    	</set>
+    	</constructor-arg>
+    	
+    	<constructor-arg name="cource">
+    	<map>
+    		<entry key="Java"  value="6month"></entry>    	
+			<entry key="Pyhton" value="4month"></entry>
+    	
+    	</map>
+    	</constructor-arg>
+    	
+    
+    </bean>
+
+</beans>
